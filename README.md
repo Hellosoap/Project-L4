@@ -23,13 +23,13 @@
 
 ## APIs BUILT IN THE PROJECT
 
-Categories Module: Includes Create, Fetch, Update, and Delete (CRUD) operations.
+- Categories Module: Includes Create, Fetch, Update, and Delete (CRUD) operations.
 
-Products Module: Includes CRUD functionality plus filtering by category, stock availability, price, and search.
+- Products Module: Includes CRUD functionality plus filtering by category, stock availability, price, and search.
 
-Cart Module: Supports adding items, fetching a user's cart, updating item quantities, removing items, and clearing the entire cart.
+- Cart Module: Supports adding items, fetching a user's cart, updating item quantities, removing items, and clearing the entire cart.
 
-Orders Module: Handles creating new orders, retrieving all orders, fetching order details by ID, and updating order status.
+- Orders Module: Handles creating new orders, retrieving all orders, fetching order details by ID, and updating order status.
 
 ## PREQUISITES
 
