@@ -1,11 +1,13 @@
 const config = require('./config/db');
 const mongoose = require('mongoose');
 const Category = require('./models/Category');
+const Order = require('./models/Order')
 const Product = require('./models/Product');
 
 const seed = async() =>{
     try{
         await mongoose.connect(config.mongoUrl);
+        await Order.deleteMany({});
         await Product.deleteMany({});
         await Category.deleteMany({});
         console.log("Cleaning done.");
@@ -21,9 +23,9 @@ const seed = async() =>{
             name: 'Furniture',
             description: 'Clean furniture, supports everyday human life.'
         });
-
+        const categories = [makeup,clothes,furniture]
         console.log("Creating new products..");
-        await Product.create([
+        const products = await Product.create([
             {
                 name: 'Lipstick',
                 price: 20,
@@ -61,12 +63,13 @@ const seed = async() =>{
                 category: furniture._id
             }
         ]);
-        console.log("Products have been created and added to the database.");
-        mongoose.connection.close();
-        process.exit(0);
+        console.log(`${products.length + categories.length} docs have been created and added to the database.`);
     } catch(error){
         console.log("Error! Couldn't create data.", error.message);
         process.exit(1);
+    } finally{
+        await mongoose.disconnect();
+        console.log('Database disconnected.')
     }
 }
 
