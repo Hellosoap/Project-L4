@@ -15,10 +15,6 @@ exports.getOne = asyncHandler(async(req,res,next) => {
 
 // Fetches ALL categories
 exports.getAll = asyncHandler(async(req,res,next) => {
-    // const filter = {};
-    // if(req.query.name){
-    //     filter.name = req.query.name;
-    // }
     const categories = await Category.find();
     sendSuccess(res,categories);
 });
