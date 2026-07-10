@@ -1,6 +1,4 @@
-const express = require('express')
-const app = express()
-app.use((error, req, res, next) => {
+module.exports = ((error, req, res, next) => {
     if(error.name === 'ValidationError' || error.name === 'CastError'){
         error.statusCode = 400;
         error.isOperational = true;
