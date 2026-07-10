@@ -2,7 +2,7 @@
 
 **SHOP**
 
-- *This API manages the data and logic for the SHOP website. It handles things like adding items to a cart, processing orders, and managing products. It gives you a great shopping experience!*
+- This API manages the data and logic for the SHOP website. It handles things like adding items to a cart, processing orders, and managing products. It gives you a great shopping experience!
 
 *Built With:*
 
