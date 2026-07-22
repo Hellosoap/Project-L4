@@ -39,9 +39,9 @@
 
 ## INSTALLATION STEPS
 
-(1) - git clone https://github.com/Hellosoap/Project---L4.git
+(1) - git clone https://github.com/Hellosoap/Project-L4.git
 
-(2) - cd Project---L4
+(2) - cd Project-L4
 
 (3) - npm install
 
